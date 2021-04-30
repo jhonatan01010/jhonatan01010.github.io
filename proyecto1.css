@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizin:border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to right, #43cea2, #185a9d);
+	display: flex;
+	min-height: 100vh;
+	font-family: 'Orelega One', cursive;erif;
+	font-size: 20px;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+
+.contenedor {
+	max-width: 1200px;
+	margin:50px auto;
+	display: flex;
+	margin-left: 100px;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.contenedor-tarjeta {
+	margin: 70px;
+}
+.contendor-tarjeta a {
+	display: inline-block;
+	text-decoration: none;
+
+}
+
+.contenedor1 {
+	background-color: #fff;
+	width: 90%;
+	max-width: 1200px;
+	margin: 50px auto;
+	padding: 20px;
+	margin-left:80px;
+	border-radius: 10px;
+}
+.contenedor-tarjeta:hover figure {
+	-webkit-transform: perspective(600px) rotateY(180deg);
+	-ms-transform:perspective(600px) rotateY(180deg);
+	-o-transform:perspective(600px) rotateY(180deg);
+	transform:perspective(600px) rotateY(180deg);
+	-webkit-box-shadow:0px 2px 10px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow:0px 2px 10px 2px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+
+.contenedor-tarjeta:hover figure img{
+	filter: blur(2px);
+}
+figure {
+	width: 300px;
+	height: 380px;
+	margin: 0;
+	position: relative;
+	transition: all ease .5s;
+	transform-style: preserve-3d;
+	transform: perspective(600px) rotateY(0deg);
+}
+figure .frontal,
+figure .trasera {
+	width: 100%;
+	height: 90%;
+	border-radius: 5px;
+	transition: all ease .5s;
+}
+
+figure .frontal {
+	display: block;
+	backface-visibility: 
+}
+
+figure .trasera {
+	position: absolute;
+	top: 0;
+	height: 390px;
+	padding: 20px;
+	color: #fff;
+	background: #16222A;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	overflow: auto;
+}
+
+figure .trasera .titulo {
+	color: #fff;
+	font-weight: normal;
+	margin-bottom: 20px;
+	font-size: 35px;
+}
+
+figure .trasera .titulo p{
+	font-size: 20px;
+
+}
+figure .trasera hr {
+	height: 3px;
+	background: #fff;
+	margin-bottom: 20px;
+	opacity: .5;
+
+	border: 0;
+	text-align: center;
+	 background-image: linear-gradient(left, #fff, #000, #fff);
+}
+
+.banner_title .btn-link{
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    background:  #185a9d;
+    padding: 20px;
+    margin:20px 20px;
+    margin-left: 40%;
+    border-radius: 50px;
+}
+
+
+@media screen and (max-width: 992px) {
+	figure .trasera {
+		backface-visibility: visible;
+		transform: perspective(600px) rotateY(0deg);
+	}
+
+	.contenedor-tarjeta:hover figure {
+		transform: perspective(600px) rotateY(0deg);
+
+	}
+}

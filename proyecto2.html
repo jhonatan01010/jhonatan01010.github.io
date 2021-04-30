@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="viewport" content="width=device-width, initial-scale=1.0>">
+	<title>Inicio3</title>
+	<link rel="stylesheet" href="proyecto2.css">
+</head>
+<body>
+	<div id="card">
+    <div id="card-inside">
+      <div class="wrap">
+        <p>Hola Querida . .</p>
+        <p>“Un deseo para ti en tu cumpleaños, lo que pidas lo recibas, lo que busques lo encuentres, lo que desees se cumpla en tu cumpleaños. Que Dios te bendiga siempre y que te la pases super bien con tu familia en tu día. Feliz cumpleaños..!</p>
+        <p>Estaré contigo a tu lado para ayudarte, consejarte, animarte o en las buenas y en las malas.
+        </p>
+        <p> Que este día sea especial y lo vivas en grande. Y que tu vida sea larga y esté llena de felicidad. Te deseo lo mejor porque te lo mereces.</p>
+        
+        <center><h4>De:</h4></center>
+        <p class="signed">Jhonatan Coronado</p>
+        
+      </div>
+    </div>
+    <div id="card-front">
+      <div class="wrap">
+        <h1>Happy Birthday!</h1>
+        <h1>Abreme</h1>
+      </div>
+      <button id="open">&gt;</button>
+      <button id="close">&lt;</button>
+    </div>
+    <section class="banner_title">
+		<a href="proyecto3.html" class="btn-link"> Siguiente
+			<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+	</section>
+  </div>
+  <script>
+    (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());
+
+  </script>
+
+<div style="visibility: hidden;">
+<embed src="bday.mp3" autostart="true" loop="true">
+</div>
+<div style="visibility: hidden;">
+<embed src="bday.mp3" autostart="true" loop="true">
+</div>
+
+</body>
+</html>
